@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="images/ts.png">
+	<title>Checkout</title>
+	
+	    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+ integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	
+<style>
+
+	.ccc {background-color: lightgrey;
+		border: 5px solid white;
+		height: 200px;
+		width: 33%;
+	 }
+	 
+	#left{
+	width: 33%;
+	float:left;
+	}
+	#center{
+		width: 33%;
+		float:left;
+	}
+	#right{
+		width: 34%;
+		position: relative;
+		float: left;
+	}
+
+	.coupon{
+			color: red;
+			font-size: 25px;
+		}
+		
+	body{
+		background-image: url("images/background.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+	}	
+	
+	h1{
+		color:red;
+		text-align: center;
+	}
+	
+	.contacts{
+		border: solid 5px lightblue;
+		background-color: lightgrey;
+		text-align: center;
+	}
+	
+	#para{
+		font-weight: bold;
+	}
+	
+	h3{
+		color: red;
+	}
+
+</style>
+</head>
+<body>
+<!-- Buttons and Logo -->
+<!-- Menu Bar -->
+<div class = "container">
+<br><br>
+<nav class="navbar navbar-expand" style="background-color: lightgrey;">
+  <a class="navbar-brand" href="index.html">TechShop</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">&nbsp &nbsp Home &nbsp &nbsp<span class="sr-only">(current)</span></a>
+      </li>	
+      <li class="nav-item active">
+        <a class="nav-link" href="shop.html">&nbsp &nbsp Shop &nbsp &nbsp<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="proTeams.html">&nbsp &nbsp Pro Teams &nbsp &nbsp</a>
+      </li>	
+      <li class="nav-item active">
+        <a class="nav-link" href="aboutTheGame.html">&nbsp &nbsp About The Game &nbsp &nbsp</a>
+      </li>	  	 
+	  <li class="nav-item active">
+        <a class="nav-link" href="register.html">&nbsp &nbsp Register</a>
+      </li>	  
+	  <li class="nav-item active">
+        <a class="nav-link" href="login.html">&nbsp &nbsp Login &nbsp &nbsp</a>
+      </li>
+	  <li class="nav-item active">
+        <a class="nav-link" href="logout.html">&nbsp &nbsp Logout &nbsp &nbsp</a>
+      </li>
+	  <li class="nav-item active">
+        <a class="nav-link" href="checkout.html">&nbsp &nbsp Checkout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<hr></hr>
+	
+	<div class = 'contacts'>
+		
+		<h1>Checkout</h1><br>
+		<h2 id="customer"></h2>
+		
+		<div>
+			<div>
+				<br>
+				<div id="left">
+					<img src="Phone images/apple-iphone-x.png" alt="iPhone x" align="center"> 
+				</div>
+				<div id ="center">
+					<img src="Phone images/apple-iphone-7.png" alt="iPhone 7" align="center">
+				</div>
+				<div id ="right">
+					<img src="Phone images/Samsung-Galaxy s9.png" alt="Samsung Galaxy s9" align="center">
+					<br><br><br>
+				</div>
+			</div>	
+		</div>
+		<div>
+			<div>
+				<br>
+				<div id="left">
+					<img src="Phone images/Samsung-Galaxy-s8.png" alt="Samsung Galaxy s8" align="center">
+				</div>
+				<div id ="center">
+					<img src="Phone images/huawei-p20.png" alt="Huawei P20" align="center">
+				</div>
+				<div id ="right">
+					<img src="Phone images/sony-xperia.png" alt="Sony Xperia" align="center">
+					<br><br><br>
+				</div>
+			</div>	
+		</div>
+		
+		<h4 id="phoneNames"></h4>
+		<h3 id="cost"></h3>
+		
+		<b>Enter Coupon Code: </b><input type="text" id="discount"></input><br><br>
+		<button type="button" class="btn btn-primary" align="right" onclick="discountPrice()">Enter</button>
+		
+		<h3 id="newPrice"></h3>
+		<button type="button" class="btn btn-primary" align="right" onclick="confirm()">Confirm</button>
+		
+	</div>
+
+	<hr><hr>	
+	
+		<div class="row">
+			<div class = "col-lg-12 ccc" id = "colour">
+				<br>
+				<div id="left">
+				<h3><b>Contacts</b></h3>
+				<p><b>Email: <a href="https://www.google.com/gmail/about/#"> techGeeks@gmail.com</a></b></p>
+				<p><b>Phone: 085 123 2132</b></p>					
+				</div>
+
+				<div id ="center">
+				<a href ="https://www.instagram.com/" ><img src="images/instagram.png" alt="Instagram Logo" width="100" height="100"></a>
+				<a href="https://www.google.com/gmail/about/#"><img src="images/gmail.png" alt="Gmail Logo" width="100" height="100"><a>
+				</div>
+				<div id ="right">
+				<a href ="https://twitter.com/"> <img src="images/twitter.png" alt="Twitter Logo" width="100" height="100"></a>
+				<a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook Logo" width="100" height="100"></a>
+				</div>
+				<marquee behavior="scroll" direction="left" class="coupon">Use Coupon code WEAREAMAZING for 10% Off!</marquee>
+			</div>	
+		</div>
+	</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	
+	<script>
+		
+		document.getElementById("customer").innerHTML = "Hello " + sessionStorage.name + " welcome to your checkout page!!";
+		var t = ((+sessionStorage.phone1 * 1129.99) + (+sessionStorage.phone2 * 599.99) + 
+		(+sessionStorage.phone3 * 809.99) + (+sessionStorage.phone4 * 629.99) + (+sessionStorage.phone5 * 549.99) + (+sessionStorage.phone6 * 549.99));
+		var total = "€" + t.toFixed(2);
+		document.getElementById("cost").innerHTML = "<br><br>Total price is " + total;
+		
+		function discountPrice()
+		{
+			var disc = document.getElementById("discount").value;
+		
+			if (disc == "weareamazing" || disc == "WEAREAMAZING")
+			{
+				var t2 = ((+sessionStorage.phone1 * 1129.99) + (+sessionStorage.phone2 * 599.99) + 
+				(+sessionStorage.phone3 * 809.99) + (+sessionStorage.phone4 * 629.99) + (+sessionStorage.phone5 * 549.99) + (+sessionStorage.phone6 * 549.99)) * 0.9;
+				var newtotal = "€" + t2.toFixed(2);
+				document.getElementById("newPrice").innerHTML = "<br><br>Total price is " + newtotal;
+			}
+			else
+			{
+				document.getElementById("newPrice").innerHTML = "<br><br>Total price is " + total;
+			}
+		}
+		var totalNames = "";
+		
+		if (sessionStorage.phone1 > 0)
+		{
+			//var phoneName1 = "Iphone X"
+			totalNames += "<br> Iphone x";
+		}
+		
+		if (sessionStorage.phone2 > 0)
+		{
+			//var phoneName2 = "Iphone 7"
+			totalNames += "<br> Iphone 7";
+		}
+
+		if (sessionStorage.phone3 > 0)
+		{
+			//var phoneName3 = "Samsung-Galaxy-s9"
+			totalNames += "<br> Samsung-Galaxy-s9";
+		}
+
+		if (sessionStorage.phone4 > 0)
+		{
+			//var phoneName4 = "Samsung-Galaxy-s8"
+			totalNames += "<br> Samsung-Galaxy-s8";
+		}
+
+		if (sessionStorage.phone5 > 0)
+		{
+			//var phoneName5 = "Huawei p20"
+			totalNames += "<br> Huawei p20";
+		}
+
+		if (sessionStorage.phone6 > 0)
+		{
+			//var phoneName6 = "Sony Xperia x2"
+			totalNames += "<br> Sony Xperia x2";
+		}		
+		
+		function confirm()
+		{
+			alert("Purchase Successful!!");
+			window.location.href = "index.html";	
+		}
+		
+		document.getElementById("phoneNames").innerHTML = "The phones you have bought are: " + totalNames;
+		
+	</script>
+	
+</body>
+</html> 
